@@ -8,9 +8,9 @@ public class 점수계산 {
         int cnt = 0;
 
         for(int i = 0; i < n; i++) {
-            if(arr[i] == 1) {
+            if(arr[i] == 1) { // 점수가 났을 때
                 cnt++;
-                answer += cnt;
+                answer += cnt; // 누적
             } else {
                 cnt = 0;
             }
