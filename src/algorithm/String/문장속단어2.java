@@ -17,7 +17,7 @@ public class 문장속단어2 {
             }
             str = str.substring(pos + 1); // 다음 공백으로 넘어가기
         }
-        if(str.length() > m) { // 마지막 단어 적용
+        if(str.length() > m) { // 마지막 단어 적용 (마지막 단어는 뒤에 공백이 없음)
             answer = str;
         }
 
