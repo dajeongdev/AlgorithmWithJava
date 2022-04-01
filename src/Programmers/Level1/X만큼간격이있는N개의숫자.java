@@ -9,7 +9,7 @@ public class X만큼간격이있는N개의숫자 {
      * n은 1000 이하인 자연수입니다.
      */
 
-    public static long[] solution(int x, int n) {
+    public long[] solution(int x, int n) {
         long[] answer = new long[n];
         answer[0] = x;
 
@@ -17,9 +17,5 @@ public class X만큼간격이있는N개의숫자 {
             answer[i] = answer[i - 1] + x;
         }
         return answer;
-    }
-
-    public static void main(String ars[]) {
-        X만큼간격이있는N개의숫자.solution(-4, 2);
     }
 }
