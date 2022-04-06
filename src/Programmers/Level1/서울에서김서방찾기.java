@@ -35,7 +35,7 @@ public class 서울에서김서방찾기 {
     }
 
     /**
-     * 참고할 만한 다른 풀이
+     * 참고할 만한 풀이
       */
     public String otherAnswer(String[] seoul){
         int x = Arrays.asList(seoul).indexOf("Kim");

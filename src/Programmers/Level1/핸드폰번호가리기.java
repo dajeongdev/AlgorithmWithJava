@@ -23,9 +23,9 @@ public class 핸드폰번호가리기 {
     }
 
     /***
-     * 참고할만한 풀이
+     * 참고할 만한 풀이
      */
-    public String solutionA(String phone_number) {
+    public String otherAnswer(String phone_number) {
         char[] ch = phone_number.toCharArray();
         for(int i = 0; i < ch.length - 4; i ++){
             ch[i] = '*';

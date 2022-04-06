@@ -17,9 +17,4 @@ public class 짝수와홀수 {
         String answer = "";
         return answer = num % 2 == 0 ? "Even" : "Odd";
     }
-
-    public static void main(String[] args) {
-        System.out.println(짝수와홀수.solution(3));
-        System.out.println(짝수와홀수.solution(4));
-    }
 }

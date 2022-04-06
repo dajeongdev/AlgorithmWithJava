@@ -22,7 +22,7 @@ public class 평균구하기 {
     }
 
     /**
-     * 참고할만한 답변
+     * 참고할 만한 풀이
      * */
     public int otherAnswer1(int[] array) {
         return (int) Arrays.stream(array).average().orElse(0);

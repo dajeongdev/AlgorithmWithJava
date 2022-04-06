@@ -34,7 +34,7 @@ public class 직사각형별찍기 {
     }
 
     /**
-     * 참고할 만한 코드
+     * 참고할 만한 풀이
      */
     private void otherAnswer1() {
         Scanner sc = new Scanner(System.in);
