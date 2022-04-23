@@ -22,13 +22,13 @@ public class 두정수사이의합 {
 
         int bigger = 0;
         int smaller = 0;
-       if (a > b) {
-           bigger = a;
-           smaller = b;
-       } else {
-           bigger = b;
-           smaller = a;
-       }
+        if (a > b) {
+            bigger = a;
+            smaller = b;
+        } else {
+            bigger = b;
+            smaller = a;
+        }
 
         for (int i = smaller; i <= bigger; i++) {
             answer += i;
