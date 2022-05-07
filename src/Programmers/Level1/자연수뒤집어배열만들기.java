@@ -13,7 +13,7 @@ public class 자연수뒤집어배열만들기 {
      * n	return
      * 12345	[5,4,3,2,1]
      */
-    public static int[] solution(long n) {
+    public int[] solution(long n) {
         char[] chars = String.valueOf(n).toCharArray();
         int[] answer = new int[chars.length];
 

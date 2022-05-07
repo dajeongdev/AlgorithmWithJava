@@ -29,7 +29,7 @@ public class 콜라츠추측 {
      * 입출력 예 #3
      * 626331은 500번을 시도해도 1이 되지 못하므로 -1을 리턴해야합니다.
      */
-    public static int solution(long num) {
+    public int solution(long num) {
         int answer = 0;
 
         while(num > 1) {
@@ -37,14 +37,6 @@ public class 콜라츠추측 {
             answer++;
         }
 
-
-
         return answer > 500 ? -1 : answer;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(콜라츠추측.solution(6));
-        System.out.println(콜라츠추측.solution(16));
-        System.out.println(콜라츠추측.solution(626331));
     }
 }

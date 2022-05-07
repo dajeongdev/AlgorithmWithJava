@@ -13,7 +13,7 @@ public class 짝수와홀수 {
      * 3	"Odd"
      * 4	"Even"
      */
-    public static String solution(int num) {
+    public String solution(int num) {
         String answer = "";
         return answer = num % 2 == 0 ? "Even" : "Odd";
     }

@@ -20,8 +20,7 @@ public class 정수제곱근판별 {
      * 입출력 예#2
      * 3은 양의 정수의 제곱이 아니므로, -1을 리턴합니다.
      */
-
-    public static long solution(long n) {
+    public  long solution(long n) {
         long sqrt = (long) Math.sqrt(n);
 
         if (Math.pow(sqrt, 2) == n) {
@@ -29,10 +28,5 @@ public class 정수제곱근판별 {
         } else {
             return -1;
         }
-    }
-
-    public static void main(String[] args) {
-        System.out.println(정수제곱근판별.solution(121));
-        System.out.println(정수제곱근판별.solution(3));
     }
 }

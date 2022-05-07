@@ -23,7 +23,7 @@ public class 최대공약수와최소공배수 {
      * [최대공약수]
      * A를 B로 나눈 몫을 Q라고 할 때 나머지 R을 최대공약수라고 함
      */
-    public static int[] solution(int n, int m) {
+    public int[] solution(int n, int m) {
         int[] answer = new int[2];
 
         int bigger = Math.max(n, m);

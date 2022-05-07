@@ -16,8 +16,7 @@ public class 문자열내림차순으로배치하기 {
      * s	return
      * "Zbcdefg"	"gfedcbZ"
      */
-
-    public static String solution(String s) {
+    public String solution(String s) {
         String answer = "";
 
         String[] str = s.split("");

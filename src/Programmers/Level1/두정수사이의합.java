@@ -17,7 +17,7 @@ public class 두정수사이의합 {
      * 3	3	3
      * 5	3	12
      */
-    public static long solution(int a, int b) {
+    public long solution(int a, int b) {
         long answer = 0;
 
         int bigger = 0;

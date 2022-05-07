@@ -20,8 +20,7 @@ public class 자릿수더하기 {
      * 입출력 예 #2
      * 9 + 8 + 7 = 24이므로 24를 return 하면 됩니다.
      */
-
-    public static int solution(int n) {
+    public  int solution(int n) {
         int answer = 0;
 
         char[] chars = String.valueOf(n).toCharArray();
@@ -31,10 +30,5 @@ public class 자릿수더하기 {
         }
 
         return answer;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(자릿수더하기.solution(123));
-        System.out.println(자릿수더하기.solution(987));
     }
 }

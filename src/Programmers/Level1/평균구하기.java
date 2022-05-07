@@ -11,7 +11,7 @@ public class 평균구하기 {
      * arr의 원소는 -10,000 이상 10,000 이하인 정수입니다.
      */
 
-    public static double solution(int[] arr) {
+    public double solution(int[] arr) {
         double answer = 0;
 
         for (int i = 0; i < arr.length; i++) {

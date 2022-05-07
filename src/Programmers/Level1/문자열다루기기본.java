@@ -14,8 +14,7 @@ public class 문자열다루기기본 {
      * "a234"	false
      * "1234"	true
      */
-
-    public static boolean solution(String s) {
+    public  boolean solution(String s) {
         boolean answer = true;
 
         if (s.length() != 4 && s.length() != 6) return false;
@@ -25,11 +24,6 @@ public class 문자열다루기기본 {
         }
 
         return answer;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(문자열다루기기본.solution("a234"));
-        System.out.println(문자열다루기기본.solution("1234"));
     }
 
     /***

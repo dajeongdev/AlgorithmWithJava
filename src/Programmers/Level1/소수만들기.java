@@ -27,7 +27,7 @@ public class 소수만들기 {
      * [2,4,7]을 이용해서 13을 만들 수 있습니다.
      * [4,6,7]을 이용해서 17을 만들 수 있습니다.
      */
-    public static int solution(int[] nums) {
+    public int solution(int[] nums) {
         int answer = 0;
 
         for (int i = 0; i < nums.length; i++) {
@@ -42,7 +42,7 @@ public class 소수만들기 {
         return answer;
     }
 
-    private static boolean isDecimal(int num) {
+    private boolean isDecimal(int num) {
         for (int i = 2; i < num; i++) {
             if (num % i == 0) return false;
         }

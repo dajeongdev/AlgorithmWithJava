@@ -8,11 +8,7 @@ public class 핸드폰번호가리기 {
      * 제한 조건
      * phone_number는 길이 4 이상, 20이하인 문자열입니다.
      */
-
-    /**
-     * 내 풀이
-     */
-    public static String solution(String phone_number) {
+    public String solution(String phone_number) {
         String answer = "";
 
         for (int i = 0; i < phone_number.length() - 4; i++) {
