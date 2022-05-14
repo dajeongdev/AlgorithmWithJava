@@ -18,7 +18,7 @@ public class 약수의합 {
      * 입출력 예 #2
      * 5의 약수는 1, 5입니다. 이를 모두 더하면 6입니다.
      */
-    public static int solution(int n) {
+    public int solution(int n) {
         int answer = 0;
 
         for (int i = 1; i <= (n % i); i++) {
@@ -32,7 +32,7 @@ public class 약수의합 {
      * 좋은 방법
      * for문을 다 돌지말고 n의 제곱근만큼만 돌리기!
      */
-    public static int otherAnswer(int n) {
+    public int otherAnswer(int n) {
         int answer = 0;
 
         for (int i = 1; i <= Math.sqrt(n); i++) {
