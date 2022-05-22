@@ -1,6 +1,6 @@
 package Baekjoon.Level1;
 
-public class 새싹 {
+public class Problem25083 {
     /**
      * 문제
      * 아래 예제와 같이 새싹을 출력하시오.
