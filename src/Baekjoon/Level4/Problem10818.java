@@ -1,4 +1,4 @@
-package Baekjoon.Level3;
+package Baekjoon.Level4;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -35,8 +35,34 @@ public class Problem10818 {
             arr[index] = Integer.parseInt(st.nextToken());
             index++;
         }
+        br.close();
 
         Arrays.sort(arr);
         System.out.println(arr[0] + " " + arr[N - 1]);
+    }
+
+    /**
+     * 배열을 사용하면 메모리 비용이 들고, 최악의 경우 시간복잡도가 N^2이기 때문에 불필요하게 시간이 낭비된다.
+     * 그래서 배열이 사용하지 않고 입력받은 문자를 즉시 비교하는 다른 풀이가 있어 참고용으로 남겨둔다.
+     */
+    public void otherAnswer(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        Integer.parseInt(br.readLine());	// 첫 줄 N은 안쓰이므로 입력만 받는다.
+        StringTokenizer st = new StringTokenizer(br.readLine()," ");
+
+        int max = -1000001;
+        int min = 1000001;
+
+        while(st.hasMoreTokens()) {
+            int val = Integer.parseInt(st.nextToken());
+            if(val>max) {
+                max = val;
+            }
+            if(val<min) {
+                min = val;
+            }
+        }
+        System.out.println(min + " " + max);
     }
 }
