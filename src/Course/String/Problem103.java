@@ -25,7 +25,7 @@ public class Problem103 {
      * 예시 출력 1
      * study
      */
-    public String solution(String str) {
+    public String solution1(String str) {
         String result = "";
 
         int min = Integer.MIN_VALUE;
@@ -40,10 +40,27 @@ public class Problem103 {
         return result;
     }
 
+    public String solution2(String str) {
+        String result = "";
+
+        int min = Integer.MIN_VALUE;
+        int pos = 0;
+        while ((pos = str.indexOf(" ")) != -1) {
+            String temp = str.substring(0, pos);
+            int length = temp.length();
+            if (length > min) {
+                min = length;
+                result = temp;
+            }
+        }
+        return result;
+    }
+
     public static void main(String[] args) throws IOException {
         Problem103 T = new Problem103();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String str = br.readLine();
-        System.out.println(T.solution(str));
+        System.out.println(T.solution1(str));
+        System.out.println(T.solution2(str));
     }
 }
