@@ -22,7 +22,7 @@ public class Problem205 {
      * 예시 출력 1
      * 8
      */
-    public int solution1(int N) {
+    public int solution(int N) {
         int result = 0;
 
         int[] check = new int[N + 1];
@@ -37,25 +37,12 @@ public class Problem205 {
         return result;
     }
 
-    public int solution2(int N) {
-        int result = 1;
-
-        for (int i = 2; i <= N; i++) {
-            System.out.println("i = " + i);
-            if (N % i != 0) {
-                System.out.println(i);
-                result++;
-            }
-        }
-        return result;
-    }
-
     public static void main(String[] args) throws IOException {
         Problem205 T = new Problem205();
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
 
-        System.out.println(T.solution2(N));
+        System.out.println(T.solution(N));
     }
 }
