@@ -44,5 +44,18 @@ public class 숫자의표현 {
         숫자의표현 T = new 숫자의표현();
 
         System.out.println(T.solution(15));
+        System.out.println(T.otherSolution(15));
+    }
+
+    /**
+     * 정수론 정리: 주어진 자연수를 연속된 자연수의 합으로 표현하는 방법의 수 == 주어진 수의 홀수 약수의 갯수
+     */
+    public int otherSolution(int n) {
+        int answer = 0;
+
+        for (int i = 1; i <= n; i += 2) {
+            if (n % i == 0) answer++;
+        }
+        return answer;
     }
 }
