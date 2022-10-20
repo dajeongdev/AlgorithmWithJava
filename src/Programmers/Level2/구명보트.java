@@ -1,7 +1,6 @@
 package Programmers.Level2;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 public class 구명보트 {
     /**
