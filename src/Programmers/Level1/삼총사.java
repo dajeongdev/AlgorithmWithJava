@@ -1,6 +1,4 @@
-package Programmers.Level2;
-
-import java.util.Arrays;
+package Programmers.Level1;
 
 public class 삼총사 {
     /**
