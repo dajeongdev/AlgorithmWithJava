@@ -29,7 +29,6 @@ public class 숨어있는숫자의덧셈 {
         int answer = 0;
         String[] split = my_string.split("[a-zA-Z]+");
         for (String str : split) {
-            System.out.println("str = " + str);
             if (str.matches("[0-9]+")) answer += Integer.parseInt(str);
         }
         return answer;
