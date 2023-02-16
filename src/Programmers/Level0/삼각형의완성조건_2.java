@@ -36,9 +36,12 @@ public class 삼각형의완성조건_2 {
      * 따라서 7 + 6 = 13을 return합니다.
      */
     public int solution(int[] sides) {
-        int max = Math.max(sides[0], sides[1]);
         int min = Math.min(sides[0], sides[1]);
-        return (max + min) - (max - min) - 1;
+        int max = Math.max(sides[0], sides[1]);
+
+        int low = max - min;
+        int high = max + min;
+        return high - low - 1;
     }
 
     public static void main(String[] args) {
