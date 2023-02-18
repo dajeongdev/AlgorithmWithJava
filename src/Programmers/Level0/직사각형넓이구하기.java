@@ -43,6 +43,22 @@ public class 직사각형넓이구하기 {
         return width * height;
     }
 
+    public int otherSolution(int[][] dots) {
+        int[] x = new int[4];
+        int[] y = new int[4];
+        for (int i = 0; i < dots.length; i++) {
+            x[i] = dots[i][0];
+            y[i] = dots[i][1];
+        }
+
+        int xMax = Arrays.stream(x).max().getAsInt();
+        int xMin = Arrays.stream(x).min().getAsInt();
+        int yMax = Arrays.stream(y).max().getAsInt();
+        int yMin = Arrays.stream(y).min().getAsInt();
+
+        return (xMax - xMin) * (yMax - yMin);
+    }
+
     public static void main(String[] args) {
         직사각형넓이구하기 T = new 직사각형넓이구하기();
 
@@ -51,5 +67,7 @@ public class 직사각형넓이구하기 {
 
         System.out.println(T.solution(dots1));
         System.out.println(T.solution(dots2));
+        System.out.println(T.otherSolution(dots1));
+        System.out.println(T.otherSolution(dots2));
     }
 }
