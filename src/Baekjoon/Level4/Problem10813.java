@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class Problem10813 {
     /**
@@ -35,18 +34,29 @@ public class Problem10813 {
      * 3 1 4 2 5
      */
     public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(System.in);
-        int n=sc.nextInt(), m=sc.nextInt();
-        int [] bag = new int[n+1];
-        for(int i=1;i<=n;i++)
-            bag[i]=i;
-        for(int i=0;i<m;i++) {
-            int a=sc.nextInt(), b=sc.nextInt();
-            int temp=bag[a];
-            bag[a]=bag[b];
-            bag[b]=temp;
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] nm = br.readLine().split(" ");
+        int n = Integer.parseInt(nm[0]);
+        int m = Integer.parseInt(nm[1]);
+
+        int[] bucket = new int[n];
+        for (int i = 0; i < n; i++) bucket[i] = i + 1;
+
+        while (m > 0) {
+            String[] ij = br.readLine().split(" ");
+            int i = Integer.parseInt(ij[0]) - 1;
+            int j = Integer.parseInt(ij[1]) - 1;
+            int temp = bucket[i];
+            bucket[i] = bucket[j];
+            bucket[j] = temp;
+            m--;
         }
-        for(int i=1;i<=n;i++)
-            System.out.print(bag[i]+ " ");
+
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < bucket.length; i++) {
+            sb.append(bucket[i]);
+            if (i != bucket.length - 1) sb.append(" ");
+        }
+        System.out.println(sb);
     }
 }
