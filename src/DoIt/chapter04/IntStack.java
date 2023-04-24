@@ -9,27 +9,29 @@ public class IntStack {
 
     // 스택에 x를 푸시
     public int push(int x) throws OverflowIntStackException {
-        if (ptr >= max) throw new OverflowIntStackException(); // 스택이 가득 참
+        if (ptr >= max)
+            throw new OverflowIntStackException(); // 스택이 가득 참
         return stk[ptr++] = x;
     }
 
     // 스택에서 데이터를 팝(정상에 있는 데이터를 꺼냄)
     public int pop() throws EmptyIntStackException {
-        if (ptr <= 0) throw new EmptyIntStackException(); // 스택이 비어 있음
+        if (ptr <= 0)
+            throw new EmptyIntStackException(); // 스택이 비어 있음
         return stk[--ptr];
     }
 
     // 스택에서 데이터를 피크(정상에 있는 데이터를 들여다 봄)
     public int peek() throws EmptyIntStackException {
-        if (ptr <= 0) throw new EmptyIntStackException();
+        if (ptr <= 0)
+            throw new EmptyIntStackException();
         return stk[ptr - 1];
     }
 
     // 스택에서 x를 찾아 인덱스(없으며 -1)를 반환
     public int indexOf(int x) {
-        for (int i = ptr - 1; i >= 0; i--) {
+        for (int i = ptr - 1; i >= 0; i--)
             if (stk[i] == x) return i; // 검색 성공 // 정상 쪽에서 선형 검색
-        }
         return -1; // 검색 실패
     }
 
@@ -80,9 +82,9 @@ public class IntStack {
     }
 
     // 생성자
-    public IntStack(int copacity) {
+    public IntStack(int capacity) {
         ptr = 0;
-        max = copacity;
+        max = capacity;
         try {
             stk = new int[max];        // 스택 본체용 배열 생성
         } catch (OutOfMemoryError e) { // 생성할 수 없음
