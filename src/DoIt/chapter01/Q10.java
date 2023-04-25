@@ -8,17 +8,15 @@ public class Q10 {
 
         System.out.print("a의 값: ");
         int a = sc.nextInt();
-        System.out.print("b의 값: ");
-        int b = sc.nextInt();
+
+        int b;
         while (true) {
-            if (a >= b) {
-                System.out.println("a보다 큰 값을 입력하세요!");
-                System.out.print("b의 값: ");
-                b = sc.nextInt();
-            } else {
-                System.out.println("b - a는 " + (b - a) + "입니다.");
-                break;
-            }
+            System.out.print("b의 값: ");
+            b = sc.nextInt();
+            if (b > a) break;
+            System.out.println("a보다 큰 값을 입력하세요!");
         }
+
+        System.out.println("b - a는 " + (b - a) + "입니다.");
     }
 }
