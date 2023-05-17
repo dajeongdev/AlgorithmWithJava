@@ -1,8 +1,5 @@
 package Programmers.beginner;
 
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-
 public class 글자지우기 {
     /**
      * 문제 설명
@@ -27,11 +24,12 @@ public class 글자지우기 {
      * indices에 있는 인덱스의 글자들을 지우고 이어붙이면 "programmers"가 되므로 이를 return 합니다.
      */
     public String solution(String my_string, int[] indices) {
-        String answer = my_string;
-        for (int i = 0; i < indices.length; i++) {
-            answer = answer.substring(0, indices[i]) + answer.substring(indices[i]+1);
-            System.out.println("answer = " + answer);
-        }
+        String[] split = my_string.split("");
+        for (int i = 0; i < indices.length; i++)
+            split[indices[i]] = "";
+
+        String answer = "";
+        for (String str : split) answer += str;
         return answer;
     }
 
