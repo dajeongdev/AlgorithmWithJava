@@ -3,34 +3,30 @@ package DoIt.chapter06;
 import java.util.Arrays;
 import java.util.Scanner;
 
-// 버블 정렬(버전 3)
-public class BubbleSort3 {
+// 단순 선택 정렬
+public class SelectionSort {
 
-    // a[idx1]와 a[idx2]의 값을 바꿉니다.
     static void swap(int[] a, int idx1, int idx2) {
         int t = a[idx1];
         a[idx1] = a[idx2];
         a[idx2] = t;
     }
 
-    // 버블 정렬
-    static void bubbleSort(int[] a, int n) {
-        int k = 0; // a[k]보다 앞쪽은 정렬을 마친 상태
-        while (k < n - 1) {
-            int last = n - 1; // 마지막으로 요소를 교환한 위치
-            for (int j = n - 1; j > k; j--)
-                if (a[j - 1] > a[j]) {
-                    swap(a, j - 1, j);
-                    last = j;
-                }
-            k = last;
+    // 단순 선택 정렬
+    static void selectionSort(int[] a, int n) {
+        for (int i = 0; i < n - 1; i++) {
+            int min = i;      // 아직 정렬되지 않은 부분에서 가장 작은 요소의 인덱스를 기록한다.
+            for (int j = i + 1; j < n; j++)
+                if (a[j] < a[min])
+                    min = j;
+            swap(a, i, min); // 아직 정렬되지 않은 부분의 첫 요소와 가장 작은 요소를 교환한다.
         }
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("버블 정렬(버전 3)");
+        System.out.println("단순 선택 정렬");
         System.out.print("요소수 : ");
         int n = sc.nextInt();
         int[] x = new int[n];
@@ -40,7 +36,7 @@ public class BubbleSort3 {
             x[i] = sc.nextInt();
         }
 
-        bubbleSort(x, n); // 배열 x를 버블 정렬합니다.
+        selectionSort(x, n); // 배열 x를 단순 선택 정렬합니다.
 
         System.out.println("오름차순으로 정렬하였습니다.");
         System.out.println(Arrays.toString(x));
