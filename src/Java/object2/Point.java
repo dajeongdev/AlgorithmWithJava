@@ -1,8 +1,8 @@
 package Java.object2;
 
 public class Point {
-    int x; // x좌표
-    int y; // y좌표
+    int x = 10; // x좌표
+    int y = 20; // y좌표
 
     Point(int x, int y) {
         this.x = x;
@@ -15,5 +15,9 @@ public class Point {
 
     String getXY() {
         return "(" + x + "," + y + ")";
+    }
+
+    String getLocation() {
+        return "x : " + x + ", y : " + y;
     }
 }

@@ -12,7 +12,5 @@ public class Tv {
         ++channel;
     }
 
-    void channelDown() {
-        --channel;
-    }
+    void channelDown() { --channel; }
 }
