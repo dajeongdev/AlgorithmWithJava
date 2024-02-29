@@ -1,5 +1,6 @@
 package Programmers.Level1_2;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Stack;
 
@@ -49,15 +50,30 @@ public class 같은숫자는싫어 {
         return answer.stream().mapToInt(i -> i).toArray();
     }
 
+    public int[] otherSolution(int[] arr) {
+        ArrayList<Integer> answer = new ArrayList<>();
+        int prev = 10; // 이전값 저장
+        for (int num : arr) {
+            if (prev != num) {
+                answer.add(num);
+            }
+            prev = num;
+        }
+        return answer.stream().mapToInt(i -> i).toArray();
+    }
+
     public static void main(String[] args) {
         같은숫자는싫어 T = new 같은숫자는싫어();
 
         int[] arr1 = {1,1,3,3,0,1,1};
         int[] arr2 = {4,4,4,3,3};
 
-        System.out.println(Arrays.toString(T.firstSolution(arr1)));
-        System.out.println(Arrays.toString(T.firstSolution(arr2)));
-        System.out.println(Arrays.toString(T.secondSolution(arr1)));
-        System.out.println(Arrays.toString(T.secondSolution(arr2)));
+//        System.out.println(Arrays.toString(T.firstSolution(arr1)));
+//        System.out.println(Arrays.toString(T.firstSolution(arr2)));
+//        System.out.println(Arrays.toString(T.secondSolution(arr1)));
+//        System.out.println(Arrays.toString(T.secondSolution(arr2)));
+
+        System.out.println(Arrays.toString(T.otherSolution(arr1)));
+        System.out.println(Arrays.toString(T.otherSolution(arr2)));
     }
 }
